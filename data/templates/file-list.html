@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>File List</title>
+    </head>
+    <body>
+        <!-- {{ data_items }} -->
+        {% for item in data_items %}
+        <form action="file" method="get">
+            <input type="text" name="file_name" value="{{ item }}" hidden>
+            <input type="submit" name="submit" value="{{ item }}">
+        </form>
+        {% endfor %}
+    </body>
+</html>
